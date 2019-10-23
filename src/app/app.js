@@ -1,5 +1,55 @@
 import styles from "./sass/main.module.sass"
 
+console.log('>>>>>>>>>>>>>>>>>>>>', styles.backgroundColorRed);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*import createElement from './vdom/createElement';
 import render from './vdom/render';
 import mount from './vdom/mount';
@@ -36,5 +86,3 @@ setInterval(() => {
 
     vApp = vNewApp;
 }, 1000);*/
-
-console.log('>>>>>>>>>>>>>>>>>>>>', styles.backgroundColorRed);

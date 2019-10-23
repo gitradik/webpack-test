@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "dev": "lite-server --baseDir=\"./dist\" & webpack --watch"
+    "dev": "lite-server --baseDir=\"./dist\" & webpack --watch  --env=production"
   },
   "author": "",
   "license": "ISC",
