@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const autoprefixer = require('autoprefixer');
 
 module.exports = (env, ...props) => {
     const isDevelopment = env === 'development';
@@ -35,11 +36,29 @@ module.exports = (env, ...props) => {
                             }
                         },
                         {
+                            loader: 'postcss-loader',
+                            options: {
+                                ident: 'postcss',
+                                plugins: [
+                                    autoprefixer({
+                                        browsers: [
+                                            "IE 10",
+                                            "last 5 version",
+                                        ],
+                                        cascade: true,
+                                    }),
+                                ],
+                                config: {
+                                    path: path.resolve('./postcss.config.js'),
+                                },
+                            },
+                        },
+                        {
                             loader: 'sass-loader',
                             options: {
                                 sourceMap: isDevelopment
                             }
-                        }
+                        },
                     ]
                 },
                 {
@@ -53,7 +72,25 @@ module.exports = (env, ...props) => {
                             options: {
                                 sourceMap: isDevelopment
                             }
-                        }
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                ident: 'postcss',
+                                plugins: [
+                                    autoprefixer({
+                                        browsers: [
+                                            "IE 10",
+                                            "last 5 version",
+                                        ],
+                                        cascade: true,
+                                    }),
+                                ],
+                                config: {
+                                    path: path.resolve('./postcss.config.js'),
+                                },
+                            },
+                        },
                     ]
                 },
                 {

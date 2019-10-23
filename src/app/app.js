@@ -1,6 +1,6 @@
 import styles from "./sass/main.module.sass"
 
-console.log('>>>>>>>>>>>>>>>>>>>>', styles.backgroundColorRed);
+console.log('>>>>>>>>>>>>>>>>>>>>', styles);
 
 
 

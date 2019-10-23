@@ -5,17 +5,23 @@
   "main": "./src/app/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "dev": "lite-server --baseDir=\"./dist\" & webpack --watch  --env=production"
+    "build": "webpack --env=production",
+    "dev": "lite-server --baseDir=\"./dist\" & webpack --watch --env=development",
+    "dev:prod": "lite-server --baseDir=\"./dist\" & webpack --watch --env=production"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^9.6.5",
     "babel-loader": "^8.0.6",
     "html-webpack-plugin": "^3.2.0",
     "path": "^0.12.7",
     "webpack": "^4.41.2"
   },
+  "browserslist": [
+    "IE 10",
+    "last 5 version"
+  ],
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "css-loader": "^3.2.0",
@@ -23,6 +29,7 @@
     "lite-server": "^2.5.4",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "webpack-cli": "^3.3.9"
