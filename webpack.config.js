@@ -41,7 +41,7 @@ module.exports = (env, ...props) => {
                                 ident: 'postcss',
                                 plugins: [
                                     autoprefixer({
-                                        browsers: [
+                                        overrideBrowserslist: [
                                             "IE 10",
                                             "last 5 version",
                                         ],
@@ -79,7 +79,7 @@ module.exports = (env, ...props) => {
                                 ident: 'postcss',
                                 plugins: [
                                     autoprefixer({
-                                        browsers: [
+                                        overrideBrowserslist: [
                                             "IE 10",
                                             "last 5 version",
                                         ],
